@@ -12,8 +12,8 @@ Panels.credits = gameCredits
 
 -- COMIC DATA:
 -- add data to the table in this file to create your comic
-import "myComicData.lua"
-comicData = myComicData
+import "mivk.lua"
+gameData = mivk
 
 
 -- EXAMPLES:
@@ -29,4 +29,4 @@ Panels.Settings.showMenuOnLaunch = true
 
 -- START:
 -- send the data table of your comic (or an example above) to the `start()` command
-Panels.start(comicData)
+Panels.start(gameData)
