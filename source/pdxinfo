@@ -1,6 +1,6 @@
-name=A Panels Comic
-author=A Comic Artist
-description=This is a comic made with Panels.
-bundleID=com.yourdomain.GameName
-version=1.0
+name=MIVK
+author=Oleg Bedrin
+description=An adventure inspired by Strugatskies brothers novel Roadside Picnic
+bundleID=com.bedrin.mivk
+version=0.1
 imagePath=SystemAssets/
