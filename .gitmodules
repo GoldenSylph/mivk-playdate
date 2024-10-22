@@ -2,8 +2,5 @@
 	path = source/libraries/panels
 	url = https://cadin@github.com/cadin/panels.git
 [submodule "source/libraries/ldtk"]
-	path = source/libraries/ldtk
+	path = libraries
 	url = https://github.com/NicMagnier/PlaydateLDtkImporter.git
-[submodule "source/libraries/animatedSprite"]
-	path = source/libraries/animatedSprite
-	url = https://github.com/Whitebrim/AnimatedSprite.git
