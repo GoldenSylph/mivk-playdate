@@ -4,11 +4,7 @@ import "3-image-transitions.lua"
 import "4-custom-functions.lua"
 import "5-audio.lua"
 
-
--- this comicData table includes a list of the SEQUENCES 
--- imported from the individual example files
--- you can write this all as one big table, but it gets messy...
-comicData = {
+examplesData = {
 	example1,   -- simple comic
 	example2a,  -- animation (scroll)
 	example2b,  -- animation (button)

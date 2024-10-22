@@ -1,32 +1,47 @@
--- IMPORT:
--- Panels is included as a submodule in this repo
--- if you don't see any files in libraries/panels  
--- you may need to initialize the submodule
+-- CoreLibs
+import "CoreLibs/object"
+import "CoreLibs/graphics"
+import "CoreLibs/sprites"
+import "CoreLibs/timer"
+
+-- Libraries
+import "libraries/animatedSprite/AnimatedSprite"
+import "libraries/ldtk/LDtk"
 import "libraries/panels/Panels"
 
--- CREDITS:
--- edit the table inside `credits.lua`
--- to create your game credits
+-- Game
 import "cutscenes/gameCredits.lua"
+import "cutscenes/mivk.lua"
+
+import "scripts/player"
+import "scripts/gameScene"
+import "scripts/ability"
+import "scripts/spike"
+import "scripts/spikeball"
+
 Panels.credits = gameCredits
 
--- COMIC DATA:
--- add data to the table in this file to create your comic
-import "cutscenes/mivk.lua"
-gameData = comicData
+local pd <const> = playdate
+local gfx <const> = playdate.graphics
 
+local cutsceneIsPlaying = false
 
--- EXAMPLES:
--- uncomment this file to have the example data used in the `start()` command
--- look in the `examples` folder for the data files
--- import "examples/comicData.lua"
+function cutsceneDidFinish()
+    cutsceneIsPlaying = false
+end
 
+function startCutScene(cutScene)
+    cutsceneIsPlaying = true
+    Panels.startCutscene(cutScene, cutsceneDidFinish)
+end
 
--- SETTINGS:
--- change any settings before calling `start()`
-Panels.Settings.showMenuOnLaunch = true
+GameScene(startCutScene)
 
-
--- START:
--- send the data table of your comic (or an example above) to the `start()` command
-Panels.start(gameData)
+function pd.update()
+    if cutsceneIsPlaying then
+        Panels.update()
+    else
+        gfx.sprite.update()
+        pd.timer.updateTimers()
+    end
+end
