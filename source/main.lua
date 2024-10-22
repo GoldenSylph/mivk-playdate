@@ -7,13 +7,13 @@ import "libraries/panels/Panels"
 -- CREDITS:
 -- edit the table inside `credits.lua`
 -- to create your game credits
-import "gameCredits.lua"
+import "cutscenes/gameCredits.lua"
 Panels.credits = gameCredits
 
 -- COMIC DATA:
 -- add data to the table in this file to create your comic
-import "mivk.lua"
-gameData = mivk
+import "cutscenes/mivk.lua"
+gameData = comicData
 
 
 -- EXAMPLES:
