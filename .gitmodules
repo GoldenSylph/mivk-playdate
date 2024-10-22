@@ -7,5 +7,3 @@
 [submodule "source/libraries/animatedSprite"]
 	path = source/libraries/animatedSprite
 	url = https://github.com/Whitebrim/AnimatedSprite.git
-
-
